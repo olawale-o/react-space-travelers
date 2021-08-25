@@ -1,5 +1,5 @@
-export const SAVE_MISSION = 'space/rockets/SAVEMISSION';
-export const LOAD_MISSIONS = 'space/rockets/LOADMISSIONS';
+export const SAVE_MISSION = 'space/missions/SAVEMISSION';
+export const LOAD_MISSIONS = 'space/missions/LOADMISSIONS';
 
 const initialState = [];
 
