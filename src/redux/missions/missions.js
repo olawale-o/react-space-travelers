@@ -1,4 +1,5 @@
-export const SAVE_MISSION = 'space/rockets/SAVEROCKET';
+export const SAVE_MISSION = 'space/rockets/SAVEMISSION';
+export const LOAD_MISSIONS = 'space/rockets/LOADMISSIONS';
 
 const initialState = [];
 
@@ -9,10 +10,19 @@ export const createMission = (payload) => (
   }
 );
 
+export const loadMissions = (payload) => (
+  {
+    type: LOAD_MISSIONS,
+    payload,
+  }
+);
+
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case SAVE_MISSION:
       return [...state, action.payload];
+    case LOAD_MISSIONS:
+      return state.concat(action.payload);
     default:
       return state;
   }
