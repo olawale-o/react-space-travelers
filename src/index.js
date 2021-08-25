@@ -7,9 +7,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/configureStore';
 import getRockets from './redux/rockets/rockets_async_actions';
+import getMissions from './redux/missions/missions_async_actions';
+import getDragons from './redux/dragons/dragons_async_actions';
 
 const store = configureStore;
 store.dispatch(getRockets());
+store.dispatch(getMissions());
+store.dispatch(getDragons());
 
 ReactDOM.render(
   <React.StrictMode>
