@@ -7,6 +7,7 @@ const getDragons = () => (
     const missions = allDragons.map((dragon) => ({
       id: dragon.id,
       name: dragon.name,
+      type: dragon.type,
       flickrImages: dragon.flickr_images,
     }));
     dispatch(loadDragons(missions));
