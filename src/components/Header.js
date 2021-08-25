@@ -24,7 +24,7 @@ const Header = () => {
     },
   ];
   const NavComps = links.map(({ name, path }) => (
-    <LinkContainer to={path} key={name}>
+    <LinkContainer to={path} key={name} activeClassName="active-link">
       <Nav.Item as="li">
         <Nav.Link variant="primary" href={path}>{name}</Nav.Link>
       </Nav.Item>

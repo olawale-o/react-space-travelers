@@ -1,11 +1,11 @@
-export const SAVE_ROCKET = 'space/rockets/SAVEROCKET';
+export const RESERVE_ROCKET = 'space/rockets/RESERVEROCKET';
 export const LOAD_ROCKETS = 'space/rockets/LOADROCKETS';
 
 const initialState = [];
 
-export const createRocket = (payload) => (
+export const reserveRocket = (payload) => (
   {
-    type: SAVE_ROCKET,
+    type: RESERVE_ROCKET,
     payload,
   }
 );
@@ -19,8 +19,11 @@ export const loadRockets = (payload) => (
 
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SAVE_ROCKET:
-      return state.concat(action.payload);
+    case RESERVE_ROCKET: {
+      const selectedRocket = state.find((rocket) => action.payload === rocket.id);
+      selectedRocket.reserved = !selectedRocket.reserved;
+      return [...state];
+    }
     case LOAD_ROCKETS:
       return state.concat(action.payload);
     default:
