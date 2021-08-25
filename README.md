@@ -1,7 +1,6 @@
 # React space travelers' Hub
 
-> "React BookStore" is a project that displays a list of books and allows you to add and remove books from that list.
-
+> "React Space Traveler's Hub" This is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets, dragons and join selected space missions.
 # Built With
 - CSS
 - React JS
