@@ -9,3 +9,9 @@ export const fetchAllMissions = async () => {
   const response = await fetch(MISSIONS_URI);
   return response.json();
 };
+
+export const fetchAllDragons = async () => {
+  const DRAGONS_URI = 'https://api.spacexdata.com/v3/dragons';
+  const response = await fetch(DRAGONS_URI);
+  return response.json();
+};

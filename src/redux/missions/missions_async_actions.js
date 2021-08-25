@@ -5,7 +5,7 @@ const getMissions = () => (
   async function getMissions(dispatch) {
     const allMissions = await fetchAllMissions();
     const missions = allMissions.map((mission) => ({
-      id: mission.id,
+      id: mission.mission_id,
       missionName: mission.mission_name,
       description: mission.description,
     }));
