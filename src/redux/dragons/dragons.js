@@ -1,11 +1,11 @@
-export const SAVE_DRAGON = 'space/dragons/SAVEDRAGON';
+export const RESERVE_DRAGON = 'space/dragons/RESERVEDRAGON';
 export const LOAD_DRAGONS = 'space/dragons/LOADDRAGONS';
 
 const initialState = [];
 
-export const createDragon = (payload) => (
+export const reserveDragon = (payload) => (
   {
-    type: SAVE_DRAGON,
+    type: RESERVE_DRAGON,
     payload,
   }
 );
@@ -19,8 +19,11 @@ export const loadDragons = (payload) => (
 
 const dragonsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SAVE_DRAGON:
-      return [...state, action.payload];
+    case RESERVE_DRAGON: {
+      const selectedDragon = state.find(({ id }) => action.payload === id);
+      selectedDragon.reserved = !selectedDragon.reserved;
+      return [...state];
+    }
     case LOAD_DRAGONS:
       return state.concat(action.payload);
     default:
