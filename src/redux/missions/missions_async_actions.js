@@ -7,7 +7,7 @@ const getMissions = () => (
     const missions = allMissions.map((mission) => ({
       id: mission.id,
       missionName: mission.mission_name,
-      description: rocket.description,
+      description: mission.description,
     }));
     dispatch(loadMissions(missions));
   }

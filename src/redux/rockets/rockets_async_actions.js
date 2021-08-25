@@ -1,4 +1,4 @@
-import fetchAllRockets from '../../utils/utils';
+import { fetchAllRockets } from '../../utils/utils';
 import { loadRockets } from './rockets';
 
 const getRockets = () => (

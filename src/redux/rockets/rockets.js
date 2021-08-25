@@ -22,7 +22,7 @@ const rocketsReducer = (state = initialState, action) => {
     case SAVE_ROCKET:
       return state.concat(action.payload);
     case LOAD_ROCKETS:
-      return [...state, action.payload];
+      return state.concat(action.payload);
     default:
       return state;
   }
