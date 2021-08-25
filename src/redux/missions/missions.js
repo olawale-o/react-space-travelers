@@ -1,11 +1,11 @@
-export const SAVE_MISSION = 'space/missions/SAVEMISSION';
+export const JOIN_MISSION = 'space/missions/JOINMISSION';
 export const LOAD_MISSIONS = 'space/missions/LOADMISSIONS';
 
 const initialState = [];
 
-export const createMission = (payload) => (
+export const joinMission = (payload) => (
   {
-    type: SAVE_MISSION,
+    type: JOIN_MISSION,
     payload,
   }
 );
@@ -19,8 +19,11 @@ export const loadMissions = (payload) => (
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SAVE_MISSION:
-      return [...state, action.payload];
+    case JOIN_MISSION: {
+      const selectedMission = state.find(({ id }) => action.payload === id);
+      selectedMission.reserved = !selectedMission.reserved;
+      return [...state];
+    }
     case LOAD_MISSIONS:
       return state.concat(action.payload);
     default:
