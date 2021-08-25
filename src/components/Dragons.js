@@ -1,5 +1,6 @@
 // import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Container } from 'react-bootstrap';
 // import getDragons from '../redux/dragons/dragons.async_actions';
 import dragonsSelector from '../redux/dragons/dragonsSelector';
 import Dragon from './Dragon';
@@ -16,7 +17,9 @@ const Dragons = () => {
   const dragonComps = dragons.map((dragon) => <Dragon key={dragon.id} dragon={dragon} />);
   return (
     <div className="Dragons">
-      {dragonComps}
+      <Container>
+        {dragonComps}
+      </Container>
     </div>
   );
 };
