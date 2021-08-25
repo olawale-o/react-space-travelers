@@ -1,12 +1,19 @@
 import PropType from 'prop-types';
+import { Row, Col, Image } from 'react-bootstrap';
 
 const Rocket = ({ rocket }) => {
   const { rocketName, description, flickrImages } = rocket;
   return (
     <div className="Rocket">
-      {rocketName}
-      {description}
-      {flickrImages[0]}
+      <Row>
+        <Col>
+          <Image src={flickrImages[0]} fluid thumbnail />
+        </Col>
+        <Col xs={9}>
+          <h5 className="h5">{rocketName}</h5>
+          <p>{description}</p>
+        </Col>
+      </Row>
     </div>
   );
 };

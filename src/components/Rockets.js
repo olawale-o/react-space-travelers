@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Container } from 'react-bootstrap';
 import rocketsSelector from '../redux/rockets/rocketsSelector';
 import Rocket from './Rocket';
 
@@ -7,7 +8,9 @@ const Rockets = () => {
   const rocketComps = rockets.map((rocket) => <Rocket rocket={rocket} key={rocket.id} />);
   return (
     <div className="Rockets">
-      {rocketComps}
+      <Container>
+        {rocketComps}
+      </Container>
     </div>
   );
 };

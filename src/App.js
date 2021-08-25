@@ -11,9 +11,10 @@ const App = () => (
     <Header />
     <Switch>
       <Route path="/" exact component={Rockets} />
-      <Route path="/Dragons" component={Dragons} />
-      <Route path="/Missions" component={Missions} />
-      <Route path="/Profile" component={Profile} />
+      <Route path="/rockets" exact component={Rockets} />
+      <Route path="/dragons" component={Dragons} />
+      <Route path="/missions" component={Missions} />
+      <Route path="/my-profile" component={Profile} />
     </Switch>
   </div>
 );
