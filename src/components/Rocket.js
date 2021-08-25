@@ -1,7 +1,6 @@
 import PropType from 'prop-types';
 
 const Rocket = ({ rocket }) => {
-  console.log(rocket);
   const { rocketName, description, flickrImages } = rocket;
   return (
     <div className="Rocket">

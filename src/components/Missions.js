@@ -8,7 +8,6 @@ const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector(missionSelector);
   useEffect(() => {
-    console.log('called');
     dispatch(getMissions());
   }, []);
   const missionComps = missions.map((mission) => <Mission key={mission.id} mission={mission} />);
