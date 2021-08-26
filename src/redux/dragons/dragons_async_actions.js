@@ -9,6 +9,7 @@ const getDragons = () => (
       name: dragon.name,
       type: dragon.type,
       flickrImages: dragon.flickr_images,
+      wikipedia: dragon.wikipedia,
     }));
     dispatch(loadDragons(missions));
   }
