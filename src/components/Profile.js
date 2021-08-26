@@ -30,7 +30,7 @@ const Profile = () => {
     .map((rocket) => (
       <ListGroup.Item key={rocket.id}>
         {rocket.rocketName}
-        <Nav.Link href="/home" style={{ display: 'inline-block' }}>Active</Nav.Link>
+        <Nav.Link href={rocket.wikipedia} style={{ display: 'inline-block' }} target="_blank">Read more</Nav.Link>
         <div>
           {rocket.reserved && (
           <Button
@@ -48,7 +48,7 @@ const Profile = () => {
     .map((mission) => (
       <ListGroup.Item key={mission.id}>
         {mission.missionName}
-        <Nav.Link href="/home" style={{ display: 'inline-block' }}>Active</Nav.Link>
+        <Nav.Link href={mission.wikipedia} style={{ display: 'inline-block' }} target="_blank">Read more</Nav.Link>
         <div>
           {mission.reserved && (
           <Button
@@ -66,7 +66,7 @@ const Profile = () => {
     .map((dragon) => (
       <ListGroup.Item key={dragon.id}>
         {dragon.name}
-        <Nav.Link href="/home" style={{ display: 'inline-block' }}>Active</Nav.Link>
+        <Nav.Link href={dragon.wikipedia} style={{ display: 'inline-block' }} target="_blank">Read more</Nav.Link>
         <div>
           {dragon.reserved && (
           <Button
