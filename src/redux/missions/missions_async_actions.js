@@ -8,6 +8,7 @@ const getMissions = () => (
       id: mission.mission_id,
       missionName: mission.mission_name,
       description: mission.description,
+      wikipedia: mission.wikipedia,
     }));
     dispatch(loadMissions(missions));
   }
