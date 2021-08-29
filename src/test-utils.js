@@ -10,7 +10,7 @@ import { rockets, missions } from './redux/mock/data';
 const middlewares = [thunkMiddleWare];
 const middlewareEnhancers = applyMiddleware(...middlewares);
 
-const reducer = combineReducers({ rockets: rocketsReducer, mission: missonsReducer});
+const reducer = combineReducers({ rockets: rocketsReducer, missions: missonsReducer});
 const store = createStore(reducer, middlewareEnhancers);
 
 const rocketsCreator = {
@@ -20,7 +20,7 @@ const rocketsCreator = {
 
 const missionsCreator = {
   type: LOAD_MISSIONS,
-  payload: rockets,
+  payload: missions,
 };
 
 store.dispatch(rocketsCreator);
