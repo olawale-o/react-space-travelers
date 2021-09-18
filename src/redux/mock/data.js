@@ -10,7 +10,7 @@ export const rockets = [
     rocketName: 'Falcon 9',
     description: 'description',
     flickrImages: ['images'],
-  }
+  },
 ];
 
 export const missions = [
@@ -23,5 +23,18 @@ export const missions = [
     id: '2',
     missionName: 'Telstar',
     description: 'description',
-  }
+  },
+];
+
+export const dragons = [
+  {
+    id: '1',
+    dragonName: 'Dragon 1',
+    description: 'description',
+  },
+  {
+    id: '2',
+    dragonName: 'Dragon 2',
+    description: 'description',
+  },
 ];
