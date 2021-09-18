@@ -24,12 +24,13 @@ const Rocket = ({ rocket }) => {
         <Col xs={9}>
           <h5 className="h5">{rocketName}</h5>
           <p>
-            {reserved && <Badge bg="success">Reserved</Badge>}
+            {reserved && <Badge bg="success" data-testid={`reserved-${id}`}>Reserved</Badge>}
             &nbsp;
             {description}
           </p>
           {!reserved && (
           <Button
+            data-testid={`reserve-${id}`}
             variant="primary"
             onClick={() => reserve(id)}
           >
@@ -38,6 +39,7 @@ const Rocket = ({ rocket }) => {
           )}
           {reserved && (
           <Button
+            data-testid={`cancel-${id}`}
             variant="outline-secondary"
             onClick={() => reserve(id)}
           >

@@ -19,15 +19,16 @@ const Mission = ({ mission }) => {
       <td style={{ width: '55%' }}>{description}</td>
       <td style={{ verticalAlign: 'middle' }}>
         {!reserved && (
-        <Badge bg="secondary">NOT A MEMBER</Badge>
+        <Badge bg="secondary" data-testid={`no-member-${id}`}>NOT A MEMBER</Badge>
         )}
         {reserved && (
-        <Badge bg="success">Active member</Badge>
+        <Badge bg="success" data-testid={`active-member-${id}`}>Active member</Badge>
         )}
       </td>
       <td style={{ verticalAlign: 'middle' }}>
         {!reserved && (
         <Button
+          data-testid={`join-${id}`}
           variant="outline-secondary"
           onClick={() => joinmission(id)}
         >
@@ -36,6 +37,7 @@ const Mission = ({ mission }) => {
         )}
         {reserved && (
         <Button
+          data-testid={`leave-${id}`}
           variant="outline-danger"
           onClick={() => joinmission(id)}
         >
